@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lucky Number</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <form>
+  <h1>Guess the lucky number!</h1>
+  <h4>Let's see how long it takes for you to guess the right number!</h4>
+  Please enter a number between 1-10: <input type="number" min=1 max=10 id="num" name="num" /><br><br>
+
+  # of Guesses: <input type="number" id="guesses" name="guesses" value=0 readonly />
+  <button type="button" onclick="guessNum()">Check Your Number</button>
+
+  <div id="result"></div>
+</form>
+<script>
+  const LUCKY_NUM = 4;
+  function guessNum() {
+    let result;
+    let guesses = document.getElementById("guesses").value;
+    guesses++;
+    document.getElementById("guesses").value = guesses; // do I need this? dup?
+    
+    let num = document.getElementById("num").value;
+   
+    // can only do == because comparing 2 different data types. === won't work
+    if (num == LUCKY_NUM) {
+      result = "You are correct! It took you " + guesses + " guess" + "(es) to get it right.";
+    } else {
+      result = `Your guess is incorrect. Please try again.`;
+      document.getElementById("num").value = "";
+    }
+    document.getElementById("result").innerHTML = result;
+  };
+</script>
+
+
+</body>
+</html>
