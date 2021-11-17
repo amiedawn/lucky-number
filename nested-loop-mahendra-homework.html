@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dynamically Create Table in Javascript</h1>
+    <button onclick="createTable">Create Table</button>
+    <div id="container">
+      <script>
+        function createTable() {
+          var table = document.getElementById("myTable");
+
+          for (var i = 0; i < 5; i++) {
+            var row = table.insertRow(i);
+
+            for (var j = 0; j < 5; j++) {
+              var cell = row.insertCell(j);
+
+              cell.innerHTML = "New Cell";
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
