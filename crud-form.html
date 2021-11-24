@@ -51,13 +51,15 @@ function myFunction() {
   var x = document.getElementById("myTable").rows[0].cells.length;
   document.getElementById("demo").innerHTML="Found " + x + " cells in the first td element.";
   var arr = new Array();
+
   //for <tr>
   //var x = document.getElementById("myTable").rows.length;
   //document.getElementById("demo").innerHTML=document.getElementById("myTable").rows[0].cells[1].innerHTML;
   //alert(document.getElementById("myTable").rows[0].cells[1].innerHTML);
-  for(i=0;i<document.getElementById("myTable").rows.length;i++){
+
+  for(i=0;i<document.getElementById("myTable").rows.length;i++) {
     //s = "test-"+i;
-  arr[i]={"cell1":document.getElementById("myTable").rows[i].cells[0].innerHTML,"cell2":document.getElementById("myTable").rows[i].cells[1].innerHTML};	
+    arr[i]={"cell1":document.getElementById("myTable").rows[i].cells[0].innerHTML,"cell2":document.getElementById("myTable").rows[i].cells[1].innerHTML};	
   };
 
   var answer = confirm ("Are you sure?");
