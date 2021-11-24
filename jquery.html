@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=stylesheet href="jquery.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Hotel Customer Survey</h1>
+  <img src="images/hotel.jpg" alt="Hotel" style="float:right;" />
+  <h3>
+    <i>Please tell us a bit about you:</i>
+  </h3>
+
+  <form>
+    First Name: <input type="text" name="first" id="f-name" />&nbsp
+    Last Name: <input type="text" name="last" id="l-name" />&nbsp
+    Age: <input type="number" min="18" max="120" /><br><br>
+
+    Gender: 
+    <select name="Gender">
+      <option name="Gender">Female</option>
+      <option name="Gender">Male</option>
+      <option name="Gender">Prefer not to say</option>
+    </select><br>
+    
+    <p>
+      What type of travel was your recent trip?
+      <div>      
+        <input type="checkbox" name="business">Business
+        <input type="checkbox" name="personal">Personal
+      </div> 
+    </p>  
+    <br>
+    
+    <p>
+      What were the dates of your stay?
+      <div><br><br>    
+        Start Date: <input type="date" name="s-date">&nbsp
+        End Date: <input type="date" name="e-date">
+      </div> 
+    </p>  
+    <br><br>
+  </form>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery.js"></script>
+</body>
+</html>
